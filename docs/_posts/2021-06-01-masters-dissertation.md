@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Master's Thesis: Leveraging Generative Design in Design for Additive Manufacturing (DfAM)"
+description: "To develop a CAD plugin that uses Generative Design and AI to empower designers to improve their designs for 3D printing and Additive Manufacturing"
 date:   2021-06-01 00:00:00 +0100
-categories: jekyll update
+categories: jekyll
 ---
 
 ## Summary
@@ -14,6 +15,8 @@ Outcome: Successfully demonstrated that the tool is intuitive to use and guides 
 This plugin has been tested for FreeCAD 0.18 and 0.19. The code can be downloaded here.
 
 > Some pictures and screenshots of the tool in use
+
+![brokenpic](/pics/broken.png)
 
 ## Background
 
@@ -86,15 +89,70 @@ On completion, the table displays whether each generation was successfully analy
 
 > Pic of Analyse panel
 
+The Refinement stage is also optional and involves operations for optimising for additive manufacturing. The user clicks **Refine** brings up the interface below.
 
+The user can choose whether to calculate build volume, generate support structures and adjust the scanning resolution. All of the generations are then refined by clicking *Refine*.
+
+On completion, the table displays the volumes of part material and support structure material in each generation.
+
+> Pic of Refine panel
+
+Lastly, the user compares all of the generations in the **Results** stage by clicking on *Results* which brings up the interface below.
+
+If it's the first time, the plugin will take a minute to calculate the results metrics for each generation. Then the table will display all of the metrics calculated for each generation with a colour gradient scale.
+
+Metrics that are displayed include maximum and mean stresses and displacements, part volume, and support structure volumes. This provides the user with enough information to make an educated guess about which generation is best.
+
+> Pic of Results panel
 
 ## Case studies
 
+Five case studies were produced to test the effectiveness of the plugin in key areas.
+
+### Case Study 1 - Headphones Frame
+
+The connecting arch for a pair of headphones was designed in FreeCAD as a single part. It is designed to bend open as a simple compliant mechanism made from ABS.
+
+> Pictures of headphones in FreeCAD
+
+### Case Study 2 - Bicycle Seat
+
 bla bla bla
 
+### Case Study 3 - Bicycle Pedal
+
+blablabla
+
+### Case Study 4 - Connecting rod with lattice structure
+
+blablabla
+
+### Case Study 5 - GE Jet Engine Bracket
+
+blablabla
+
+## Conclusions and future work
+
+The most prominent achievement of this project is that a solid foundation is established for a plugin that combines *Generative Design* and *Design for Additive Manufacturing (DfAM)*. At the time of completion, there is no other solution like this that exists commercially or academically.
+
+The following key requirements have been met:
+
+ - **Modular** - can redo just the necessary stages instead of the whole process
+ - **Transparent** - easily see the changes that different stages make
+ - **Practical** - convenient for a designer to use in their workflows
+ - **Unique** - no other solution providing all these benefits simultaneously
+ - **Extensible** - open-source and easily modifiable
+ 
+Additionally, there is a lot of scope for future work. Some major features for consideration include:
+
+ - **Process optimisation** using Genetic Algorithms or Simulated Annealing
+ - **Lattice generation** which automatically lattices solid regions
+ - **Spatial grammars** for part generation rules
+ - **Computational offloading** to GPU or computing cluster for large generation tasks
+ - **User-defined fitness function** for more complicated optimisations
 
 
 [lmnc-channel]:	https://www.youtube.com/channel/UCafxR2HWJRmMfSdyZXvZMTw
 [sequencer-vid]: https://www.youtube.com/watch?v=9oGlCfwCoCw
-[pic-tr808]:	 https://i1.wp.com/www.rolandus.com/blog/wp-content/uploads/2014/02/tr-808.png
+
 [panel-mockup]:	 https://image.shutterstock.com/image-vector/prohibited-signs-isolated-on-white-260nw-1890653254.jpg
