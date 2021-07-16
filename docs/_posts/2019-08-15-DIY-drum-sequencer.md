@@ -2,7 +2,7 @@
 layout: post
 title:  "DIY Drum Sequencer"
 date:   2019-08-15 20:06:19 +0100
-categories: jekyll update
+categories: projects
 ---
 
 ## Summary

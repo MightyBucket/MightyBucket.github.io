@@ -3,34 +3,36 @@ layout: post
 title:  "Master's Thesis: Leveraging Generative Design in Design for Additive Manufacturing (DfAM)"
 description: "To develop a CAD plugin that uses Generative Design and AI to empower designers to improve their designs for 3D printing and Additive Manufacturing"
 date:   2021-06-01 00:00:00 +0100
-categories: jekyll
+categories: projects
 ---
 
 ## Summary
 
-Topic: Leveraging Generative Design in Design for Additive Manufacturing (DfAM)
-Goal: To develop a CAD plugin that uses Generative Design and AI to empower designers to improve their designs for 3D printing and Additive Manufacturing
-Outcome: Successfully demonstrated that the tool is intuitive to use and guides the user's creative process with case studies on a bike pedal and bike saddle.
+**Topic:** Leveraging Generative Design in Design for Additive Manufacturing (DfAM)
+
+**Goal:** To develop a CAD plugin that uses Generative Design and AI to empower designers to improve their designs for 3D printing and Additive Manufacturing
+
+**Outcome:** Successfully demonstrated that the tool is intuitive to use and guides the user's creative process with case studies on a bike pedal and bike saddle.
 
 This plugin has been tested for FreeCAD 0.18 and 0.19. The code can be downloaded here.
 
-> Some pictures and screenshots of the tool in use
-
-![brokenpic](/pics/broken.png)
+![Some pictures and screenshots of the tool in use](/pics/masters-dissertation/tool-screenshot.png)
 
 ## Background
 
 Additive manufacturing and 3D printing are rapidly growing industries. The proliferation of inexpensive 3D printing hardware for industry and hobbyists has helped to accelerate attention in the past five to ten years. There are many opportunities for better manufacturing workflows to be exploited but these have yet to be fully realised.
 
-> Photo of 3D printing
+![Photo of 3D printing](/pics/masters-dissertation/3d-printing.jpg)
+
+[comment]: <> (Source: https://unsplash.com/photos/HsefvbLbNWc)
 
 Generative design is another novel technology that has attracted significant attention in the past ten years. This involves using an algorithm to regenerate an existing part design so that it is more optimised from some sort of criteria. This is strongly linked to machine learning and artificial intelligence which has garnered significant attention from the broader community, however this technology is still far from prevalence as it is still being explored and developed.
 
-> Pic of Generative Design
+![Pic of Generative Design](/pics/masters-dissertation/generative-design.jpg)
 
 ## Existing products and research
 
-There are some promising commercial solutions for Generative Design, and some good ones for Design for Additive Manufacturing (DfAM). However, there are none commercially available that combine both techniques. A few combined solutions do exist in academic literature, which this project uses as a baseline.
+There are promising commercial solutions for Generative Design, and some good ones for Design for Additive Manufacturing (DfAM). However, there are none commercially available that combine both techniques. A few combined solutions do exist in academic literature, which this project uses as a baseline.
 
 Autodesk Fusion 360 is a popular lightweight CAD package. It is constantly updated with new tools and features, including a Generative Design tool. It is quite powerful and easy to use, but it is closed-source so it doesn't leverage well the power of new technologies.
 
@@ -44,18 +46,16 @@ The language used for scripting is Python, and macros and plugins can be written
 All of the code that comprises the plugin is written in Python. I used the PyCharm IDE for writing all scripts and modules. FreeCAD's graphical user interface (GUI) is developed in Qt, so plugin interfaces are implemented using Qt objects. Because of this, I was able to rapidly develop and prototype the plugin GUIs using Qt Designer.
 
 > Screenshots of FreeCAD, PyCharm, Qt Designer etc.
+![Screenshot of PyCharm](/pics/masters-dissertation/pycharm.png)
+![Screenshot of Qt Designer](/pics/masters-dissertation/qt-designer.png)
 
 ## Features
 
-### Parametric randomisation
-
-### Voxelisation
-
-### Part volume calculation
-
-### Support structure generation
-
-### Metric comparisons
+ - Parametric randomisation
+ - Voxelisation
+ - Part volume calculation
+ - Support structure generation
+ - Metric comparisons
 
 ## Procedure
 
@@ -63,23 +63,25 @@ To prepare a part for generative design, the user has to label some parameters i
 
 For mechanical analysis, the user marks where forces and constraints are on the part using FreeCAD's FEA workbench.
 
-> Pic of sketch with labelled parameters
+![Pic of sketch with labelled parameters](/pics/masters-dissertation/labelled-parameters.png)
 
-> Pic of FEA workbench with marked forces and constraints
+![Pic of FEA workbench with marked forces and constraints](/pics/masters-dissertation/marked-forces.png)
 
 Once these are done, the user is ready to start using the plugin. It is implemeneted as a "workbench" toolbar. The user selects the "AM Generation" workbench from a drop-down menu in the FreeCAD interface. From there, they are shown a toolbar with five buttons - one for each stage of the whole generation process.
 
-> Pic of workbench toolbar with labels
+![Pic of workbench toolbar with labels](/pics/masters-dissertation/workbench-toolbar.png)
 
 Clicking on **Initiate** will bring up a panel listing the parameters that the user labelled. In this area, the user can input the ranges that they will be varied between. Clicking OK will save the ranges for the next stage.
 
 > Pic of Initiate panel
+![Pic of Initiate panel](/pics/masters-dissertation/initiate-panel.png)
 
 The next step is the generation stage, which is started by clicking **Generate**. Inside the panel, the user can choose how many generations to produce, then commence by clicking the *Generate* button.
 
 This usually takes a few minutes to complete. Once complete, the table below shows the values given to the parameters in each generation. The user can then view a generation by selecting from the drop-down box and clicking *View*.
 
 > Pic of Generate panel
+![Pic of Generate panel](/pics/masters-dissertation/generate-panel.png)
 
 Next, the user can start the Analysis stage if they want to optimise mechanical performance. This assumes that the user has already marked the forces and constraints as described before.
 
@@ -88,6 +90,7 @@ Clicking on **Analyse** brings up the interface below. The user starts analysis 
 On completion, the table displays whether each generation was successfully analysed or not.
 
 > Pic of Analyse panel
+![Pic of Analyse panel](/pics/masters-dissertation/analysis-panel.png)
 
 The Refinement stage is also optional and involves operations for optimising for additive manufacturing. The user clicks **Refine** brings up the interface below.
 
@@ -96,6 +99,7 @@ The user can choose whether to calculate build volume, generate support structur
 On completion, the table displays the volumes of part material and support structure material in each generation.
 
 > Pic of Refine panel
+![Pic of Refine panel](/pics/masters-dissertation/refinement-panel.png)
 
 Lastly, the user compares all of the generations in the **Results** stage by clicking on *Results* which brings up the interface below.
 
@@ -104,32 +108,109 @@ If it's the first time, the plugin will take a minute to calculate the results m
 Metrics that are displayed include maximum and mean stresses and displacements, part volume, and support structure volumes. This provides the user with enough information to make an educated guess about which generation is best.
 
 > Pic of Results panel
+![Pic of Results panel](/pics/masters-dissertation/results-panel.png)
 
-## Case studies
+## Case study results
 
 Five case studies were produced to test the effectiveness of the plugin in key areas.
 
 ### Case Study 1 - Headphones Frame
 
-The connecting arch for a pair of headphones was designed in FreeCAD as a single part. It is designed to bend open as a simple compliant mechanism made from ABS.
+A headphones frame was designed as a single part to be printed from ABS. It is designed to open and be placed on the user's head by bending elastically as a compliant mechanism.
 
-> Pictures of headphones in FreeCAD
+<p float="left">
+  <img alt="Headphones model with force arrows" src="/pics/masters-dissertation/case-study-1-1.png" width="300" />
+  <img alt="Headphones model with displacement colourmap" src="/pics/masters-dissertation/case-study-1-2.png" width="300" /> 
+</p>
+
+**Task:** Find the optimal frame thickness
+
+**Objectives:**
+ - Minimise part volume
+ - Target specific displacement ranges
+ 
+**Results:**
+ - Successful demonstration of module on a simple load case
+ - Optimal design found in just 30 generations
+
 
 ### Case Study 2 - Bicycle Seat
 
-bla bla bla
+A bicycle seat was designed from Bezier curves. These dimensions were parameterised and regenerated to explore the creative design space
+
+<p float="left">
+  <img alt="Bicycle shell model" src="/pics/masters-dissertation/case-study-2-1.png" width="200" />
+  <img alt="Bicycle shell model" src="/pics/masters-dissertation/case-study-2-2.png" width="200" />
+  <img alt="Bicycle shell model" src="/pics/masters-dissertation/case-study-2-3.png" width="200" />
+</p>
+
+**Task:** Try and find different designs for a bicycle seat shell
+
+**Objective:**
+ - Explore the creative design space
+ 
+**Results:**
+ - Good variety of designs produced successfully
+ - Sucessful demonstration of the plugin's ease of use
 
 ### Case Study 3 - Bicycle Pedal
 
-blablabla
+A bicycle pedal was modelled as a frame of struts to find an optimal design that
+
+<p float="left">
+  <img alt="Bike pedal voxel model with supports" src="/pics/masters-dissertation/case-study-3-1.png" width="200" />
+  <img alt="Bike pedal stress colourmap with force" src="/pics/masters-dissertation/case-study-3-2.png" width="200" />
+  <img alt="Bike pedal model" src="/pics/masters-dissertation/case-study-3-3.png" width="200" />
+</p>
+
+**Task:** Design an optimal bike pedal that uses minimal material and supports 100kg load
+
+**Objectives:**
+ - Minimise part volume
+ - Minimse support structures
+ 
+**Results:**
+ - 34% decrease in volume
+ - Sucessful demonstration of the plugin aids the designer's creative process
 
 ### Case Study 4 - Connecting rod with lattice structure
 
-blablabla
+A solid link was designed with a lattice structure to produce a load-bearing part with decreased part volume
 
+<p float="left">
+  <img alt="Connecting rod model with forces" src="/pics/masters-dissertation/case-study-4-1.png" width="300" />
+  <img alt="Connecting rod stress colourmap" src="/pics/masters-dissertation/case-study-4-2.png" width="300" />
+</p>
+
+**Task:** Optimise the parameters for a lattice structure in a simple part
+
+**Objectives:**
+ - Minimise part volume
+ - Minimse deflection of 3mm
+ 
+**Results:**
+ - Significant 38.7% decrease in volume compared to solid material
+ - Demonstrates that module can optimise other features if implemented correctly
+ 
 ### Case Study 5 - GE Jet Engine Bracket
 
-blablabla
+This was taken from the 2013 GE Jet Bracket competition to produce an optimal design for a jet bracket to be additively manufactured. Two of the best final designs were taken and their ideas were combined then regenerated to produce an even more optimal design.
+
+<p float="left">
+  <img alt="GE Bracket stress colourmap with force arrows" src="/pics/masters-dissertation/case-study-5-1.png" width="300" />
+  <img alt="GE Bracket voxel model with support structures" src="/pics/masters-dissertation/case-study-5-2.png" width="300" />
+</p>
+
+**Task:** Take an existing optimised part design and improve it by combining other ideas
+
+**Objectives:**
+ - Minimise part volume
+ - Maximise mean stress
+ 
+**Results:**
+ - Modest 4.3% decrease in part volume
+ - Significant increase in mean stress
+ - Low support volume ratio of 0.1
 
 ## Conclusions and future work
 
@@ -151,8 +232,5 @@ Additionally, there is a lot of scope for future work. Some major features for c
  - **Computational offloading** to GPU or computing cluster for large generation tasks
  - **User-defined fitness function** for more complicated optimisations
 
-
-[lmnc-channel]:	https://www.youtube.com/channel/UCafxR2HWJRmMfSdyZXvZMTw
-[sequencer-vid]: https://www.youtube.com/watch?v=9oGlCfwCoCw
 
 [panel-mockup]:	 https://image.shutterstock.com/image-vector/prohibited-signs-isolated-on-white-260nw-1890653254.jpg
