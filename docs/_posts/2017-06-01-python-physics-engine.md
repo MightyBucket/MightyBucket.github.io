@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "Physics sandbox engine in Python"
 description: ""
 date:   2017-06-01 00:00:00 +0100
