@@ -20,11 +20,19 @@ In addition to the basic engine, I added many usability features like GUI contro
 
 ## Core engine
 
-Objects are made of simple rectangles. They each have velocity, moment of inertia
+Objects are made of simple rectangles. They all have linear and rotational momentum. The user can attach forces to them, either with constant values or using equations relating to other variables in the environment.
+
+These objects are designed to interact on collision.
 
 ## User interface
 
+Alongside building the core engine, I also made a set of classes for implementing crude GUI objects. There are classes for buttons, input boxes, graphs, sliders and windows to name a few.
 
+At the bottom is a slider that allows the user to scrub through the simulation timeline.
+
+> Animation of the slider being used
+
+On the right is a tabbed sidebar containing controls for playing around with the sandbox. The user can add new objects with this, as well as pause or reset. The user can also graph variables over time to visualise their trajectories.
 
 
 [panel-mockup]:	 https://image.shutterstock.com/image-vector/prohibited-signs-isolated-on-white-260nw-1890653254.jpg
