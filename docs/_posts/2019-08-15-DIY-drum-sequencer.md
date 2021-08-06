@@ -86,27 +86,66 @@ I was already quite familiar with the MCP23017 chip, so I went ahead and prototy
 
 Each chip was hardwired with its own address ranging between 0 and 7. All of these chips were connected on common SDA and SCL bus lines.
 
-Although I was very meticulous while making and soldering the board, despite my best efforts I was never able to get all chips to function to a desirable level. Some of the chips would have all of their GPIO fully functional and addressable, but others would be non-responsive or might even sporadically respond to different addresses. These intermittent problems were extremely irritating to troubleshoot, which led me to instead use manufactured PCBs as an alternative.
+Although I was very meticulous while making and soldering the board, there were many bugs present that caused intermittent problems. Some of the chips would have all of their GPIO fully functional and addressable, but others would be non-responsive or might even sporadically respond to different addresses. These intermittent problems were extremely irritating to troubleshoot, which led me to instead use manufactured PCBs as an alternative.
 
-Despite having not much previous experience with PCB design, I picked up the process very quickly. I used the onling EasyEDA designer, which was easy to use with a concise interface. There was also a good library of part footprints.
+I used the online EasyEDA designer, which I picked up easily despite having little PCB design experience. There was also a good library of part footprints.
 
 ![PCB design in EasyEDA and picture of finished PCB](/pics/drum-sequencer/pcb-design.png)
 
-The only feasible option for manufacturing these PCBs was to have them manufactured from a batch service in China. The manufacturing and shipping cost of producing just one PCB is quite high, but increases very little when ordering more units of the same board design. Because of this, I decided to try and make a board design that was as general as possible in the hope that they could be used in future projects.
+The only feasible option for manufacturing these PCBs was to have them manufactured from a batch service in China, which is most cost effective when ordered in large numbers. Because of this, I decided to try and make a board design that was as general as possible in the hope that they could be used in future projects.
 
-Each board has space for three MCP23017 and two CD4051BE chips which was done for two reasons. Firstly, I thought this would provide a generous amount of I/O on just a single board for the large majority of project that I might use them in. Secondly, I found that it was better to have the chips distributed across the control board rather than having them all concentrated in one board, as this made wiring and cable management a lot easier.
+Each board has space for three MCP23017 and two CD4051BE chips. This provides a total of 48 digital I/O pins and 16 analog pins per board.
 
-Breakout holes were made for the GPIO and mux pins so that jumpers could be soldered. The address pins for each MCP chip are also exposed to allow for totally configurable addresses. There are two rows of 5V and GND lines at the bottom so that the user can easily solder wires to the address lines
+Breakout holes were made for the GPIO and mux pins so that jumpers could be soldered. The address pins for each MCP chip are also exposed to allow for easy configuration. There are rows of 5V and GND lines at the bottom so that the user can easily solder wires to the address lines.
 
 ![Picture of PCB populated with chips](/pics/drum-sequencer/pcb-oblique.jpg)
 
-The buttons and LEDs were connected to the I/O headers using enamelled copper wire. The result was much better than the stripboard prototype – all of the chips responded reliably to their assigned addresses and each GPIO pin worked fine. A few buttons and LEDs responded less than optimally but this was due to problems with wiring which were easily fixed.
+The result was much better than the stripboard prototype – all of the chips responded reliably to their assigned addresses and each GPIO pin worked fine.
+
+The 21 analog inputs from the potentiometers were spread across the three CD4051BE multiplexer chips, with the selector bits controlled directly from the Arduino’s digital pins. The multiplexers worked exactly as expected, switching to the expected inputs as the selector bits were changed. 
+
+The Arduino ADC has a 10-bit resolution for 1024 discrete analogue values, which was too precise as the read values were quite unstable. Fortunately, when sending MIDI commands analogue values are represented by 7 bits or 128 discrete values so the instability disappears when these values are truncated.
+
+## Connecting everything together
+
+I considered several solutions for connecting all of the hardware together. This was a daunting task as nearly 200 electrical connections needed to be made, which needed to be accessible and reliable.
+
+These were some ideas that I considered:
+
+* Circuit traces cut from aluminium foil
+* Wire from twisted-pair ethernet cable
+* Enamel copper wire
+* Single core insulated wire
+
+In the end I settled on using enamelled copper wire to connect everything together. The result was positive - connections were very reliable, and cable management was easy.
 
 ![Picture of panel rear with wiring and soldered components](/pics/drum-sequencer/panel-rear.jpg)
 
-The 21 analog inputs from the potentiometers were spread across the three CD4051BE multiplexer chips, with the selector bits controlled directly from the Arduino’s digital pins. The multiplexers worked exactly as expected, switching to the expected inputs as the selector bits were changed. The Arduino ADC has a 10-bit resolution for 1024 discrete analogue values, which was too precise as the read values were quite unstable. Fortunately, when sending MIDI commands analogue values are represented by 7 bits or 128 discrete values so the instability disappears when these values are truncated.
+Once all the hardware was connected to the multiplexer PCBs, everything could be controlled using just twelve electrical connections.
+
+> Diagram/picture of breakout board with the 12 common connections.
+
+These were connected to the Arduino/Raspberry Pi controller.
+
+> Picture of hardware connected to Arduino/Raspberry Pi?
 
 # Software Development
+
+To test and debug the individual buttons, knobs and LEDs, I made a graphical testing app that draws a representation of the panel and indicates when a button is pressed, an LED is on and when a knob is turned on.
+
+> Screenshot/animation of diagnostics app
+
+Additionally, to calibrate and test the knobs, I made another applet that graphs the outputs of the analogue knobs, giving the user the option to select the address and analogue input.
+
+> Screenshot/animation of knob testing app
+
+Next, I made a simple app that sends MIDI notes to the MIDI out port if the user presses one of the instrument pads. I connected the box to my Mac running Logic Pro with a MIDI cable, and notes were played successfully.
+
+This program was extended into a simple 16 step sequencer. The panel plays the instrument LEDs in a regular 16-step beat. When the user presses an instrument pad on a certain beat, it is recorded into a small 'memory bank' and that instrument will be played on that beat.
+
+> Recording of panel flashing LEDs in sequence?
+
+
 
 > Animation of LEDs flashing individually
 
