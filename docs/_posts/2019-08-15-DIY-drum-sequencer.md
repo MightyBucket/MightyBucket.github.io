@@ -1,6 +1,8 @@
 ---
 layout: posts
-title:  "DIY Drum Sequencer"
+title:  "Drum synthesizer"
+description: "A drum synthesizer panel made using an Arduino, Raspberry Pi, and an IKEA drawer."
+excerpt: "A drum synthesizer panel made using an Arduino, Raspberry Pi, and an IKEA drawer."
 date:   2019-08-15 20:06:19 +0100
 categories: projects
 header:
@@ -121,13 +123,9 @@ In the end I settled on using enamelled copper wire to connect everything togeth
 
 ![Picture of panel rear with wiring and soldered components](/pics/drum-sequencer/panel-rear.jpg)
 
-Once all the hardware was connected to the multiplexer PCBs, everything could be controlled using just twelve electrical connections.
+Once all the hardware was connected to the multiplexer PCBs, everything could be controlled using just twelve electrical connections. These were connected to the Arduino/Raspberry Pi controller.
 
-> Diagram/picture of breakout board with the 12 common connections.
-
-These were connected to the Arduino/Raspberry Pi controller.
-
-> Picture of hardware connected to Arduino/Raspberry Pi?
+![Labelled diagram of electronics connected to Arduino/Raspberry Pi](/pics/drum-sequencer/electronics-and-pi.jpg)
 
 # Software Development
 

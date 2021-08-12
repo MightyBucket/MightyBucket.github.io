@@ -1,7 +1,8 @@
 ---
-layout: posts
+layout: project
 title:  "Master's Thesis"
 description: "To develop a CAD plugin that uses Generative Design and AI to empower designers to improve their designs for 3D printing and Additive Manufacturing"
+excerpt: "Leveraging Generative Design in Design for Additive Manufacturing (DfAM)"
 date:   2021-06-01 00:00:00 +0100
 categories: projects
 header:
@@ -10,13 +11,22 @@ header:
   actions:
     - label: "View Code"
       url: "http://www.example.com"
-    - label: "Download Thesis"
+    - label: "View Thesis"
       url: "/misc/FYP_rj457_reduced.pdf"
     - label: "View Poster"
       url: "/misc/FYP_poster.pdf"
----
 
-# Leveraging Generative Design in Design for Additive Manufacturing (DfAM)
+case_studies:
+  - image_path: /pics/masters-dissertation/case-study-1.png
+    url: /pics/masters-dissertation/case-study-1.png
+    alt: "Case Study 1"
+  - image_path: /pics/masters-dissertation/case-study-4.png
+    url: /pics/masters-dissertation/case-study-4.png
+    alt: "Case Study 4"
+  - image_path: /pics/masters-dissertation/case-study-5.png
+    url: /pics/masters-dissertation/case-study-5.png
+    alt: "Case Study 5"
+---
 
 
 ## Summary
@@ -32,6 +42,10 @@ Using a range of case studies, I successfully demonstrated that the tool is:
 Below is my poster which showcases the process and results. PDF can be seen [here][poster-pdf].
 
 ![Poster](/pics/masters-dissertation/poster.jpg)
+
+The project was a big success. The feedback from my supervisor and assessor was extremely positive.
+
+I recieved a mark of 73 on the project, which ensured that I recieved a first-class honours in my degree.
 
 ## Background
 
@@ -88,123 +102,19 @@ Each stage in the procedure is implemented as a command in the workbench toolbar
 
 ![Process commands in FreeCAD workbench](/pics/masters-dissertation/workbench.png)
 
+
 ## Case study results
 
 Five case studies were produced to test the effectiveness of the plugin in key areas.
 
-<div class="notice--info" markdown="1">
-### Case Study 1 - Headphones Frame
-
-A headphones frame was designed as a single part to be printed from ABS. It is designed to open and be placed on the user's head by bending elastically as a compliant mechanism.
-
-<p float="left">
-  <img alt="Headphones model with force arrows" src="/pics/masters-dissertation/case-study-1-1.png" width="250" />
-  <img alt="Headphones model with displacement colourmap" src="/pics/masters-dissertation/case-study-1-2.png" width="300" /> 
-</p>
-
-**Task:** Find the optimal frame thickness
-
-**Objectives:**
- - Minimise part volume
- - Target specific displacement ranges
-
-**Results:**
- - Successful demonstration of module on a simple load case
- - Optimal design found in just 30 generations
-</div>
-
-
-<div class="notice--info" markdown="1">
-### Case Study 2 - Bicycle Seat
-A bicycle seat was designed from Bezier curves. These dimensions were parameterised and regenerated to explore the creative design space
-
-<p float="left">
-  <img alt="Bicycle shell model" src="/pics/masters-dissertation/case-study-2-1.png" width="175" />
-  <img alt="Bicycle shell model" src="/pics/masters-dissertation/case-study-2-2.png" width="175" />
-  <img alt="Bicycle shell model" src="/pics/masters-dissertation/case-study-2-3.png" width="175" />
-</p>
-
-**Task:** Try and find different designs for a bicycle seat shell
-
-**Objective:**
- - Explore the creative design space
- 
-**Results:**
- - Good variety of designs produced successfully
- - Sucessful demonstration of the plugin's ease of use
- </div>
-
-<div class="notice--info" markdown="1">
-### Case Study 3 - Bicycle Pedal
-
-A bicycle pedal was modelled as a frame of struts to find an optimal design that
-
-<p float="left">
-  <img alt="Bike pedal voxel model with supports" src="/pics/masters-dissertation/case-study-3-1.png" width="175" />
-  <img alt="Bike pedal stress colourmap with force" src="/pics/masters-dissertation/case-study-3-2.png" width="175" />
-  <img alt="Bike pedal model" src="/pics/masters-dissertation/case-study-3-3.png" width="175" />
-</p>
-
-**Task:** Design an optimal bike pedal that uses minimal material and supports 100kg load
-
-**Objectives:**
- - Minimise part volume
- - Minimse support structures
- 
-**Results:**
- - 34% decrease in volume
- - Sucessful demonstration of the plugin aids the designer's creative process
-</div>
-
-<div class="notice--info" markdown="1">
-### Case Study 4 - Connecting rod with lattice structure
-
-A solid link was designed with a lattice structure to produce a load-bearing part with decreased part volume
-
-<p float="left">
-  <img alt="Connecting rod model with forces" src="/pics/masters-dissertation/case-study-4-1.png" width="275" />
-  <img alt="Connecting rod stress colourmap" src="/pics/masters-dissertation/case-study-4-2.png" width="275" />
-</p>
-
-**Task:** Optimise the parameters for a lattice structure in a simple part
-
-**Objectives:**
- - Minimise part volume
- - Minimse deflection of 3mm
- 
-**Results:**
- - Significant 38.7% decrease in volume compared to solid material
- - Demonstrates that module can optimise other features if implemented correctly
-</div>
- 
-<div class="notice--info" markdown="1">
-### Case Study 5 - GE Jet Engine Bracket
-
-This was taken from the 2013 GE Jet Bracket competition to produce an optimal design for a jet bracket to be additively manufactured. Two of the best final designs were taken and their ideas were combined then regenerated to produce an even more optimal design.
-
-<p float="left">
-  <img alt="GE Bracket stress colourmap with force arrows" src="/pics/masters-dissertation/case-study-5-1.png" width="275" />
-  <img alt="GE Bracket voxel model with support structures" src="/pics/masters-dissertation/case-study-5-2.png" width="275" />
-</p>
-
-**Task:** Take an existing optimised part design and improve it by combining other ideas
-
-**Objectives:**
- - Minimise part volume
- - Maximise mean stress
- 
-**Results:**
- - Modest 4.3% decrease in part volume
- - Significant increase in mean stress
- - Low support volume ratio of 0.1
-</div>
+{% include gallery id="case_studies" caption="Slides of case studies" %}
  
 
 ## Conclusions and future work
 
 The most prominent achievement of this project is that a solid foundation is established for a plugin that combines *Generative Design* and *Design for Additive Manufacturing (DfAM)*. At the time of completion, there is no other solution like this that exists commercially or academically.
 
-The following key requirements have been met:
+These key requirements were met:
 <div class="notice--success" markdown="1">
  - **Modular** - can redo just the necessary stages instead of the whole process
  - **Transparent** - easily see the changes that different stages make
@@ -220,6 +130,8 @@ Additionally, there is a lot of scope for future work. Some major features for c
  - **Computational offloading** to GPU or computing cluster for large generation tasks
  - **User-defined fitness function** for more complicated optimisations
 </div>
+
+My supervisor was very happy with my work. Because he was also supervising other projects from students with similar themes, a seminar was held with the other students to present our work.
 
 [panel-mockup]:	 https://image.shutterstock.com/image-vector/prohibited-signs-isolated-on-white-260nw-1890653254.jpg
 [poster-pdf]: 	/misc/FYP_poster.pdf

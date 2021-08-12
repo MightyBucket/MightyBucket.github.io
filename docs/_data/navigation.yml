@@ -1,5 +1,3 @@
 main:
   - title: "Projects"
-    url: https://www.example.com
-  - title: "About Me"
-    url: /about/
+    url: /projects/
