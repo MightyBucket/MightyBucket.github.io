@@ -18,13 +18,13 @@ header:
 
 case_studies:
   - image_path: /pics/masters-dissertation/case-study-1.png
-    url: /pics/masters-dissertation/case-study-1.png
+    url: /pics/masters-dissertation/case-study-1.PNG
     alt: "Case Study 1"
   - image_path: /pics/masters-dissertation/case-study-4.png
-    url: /pics/masters-dissertation/case-study-4.png
+    url: /pics/masters-dissertation/case-study-4.PNG
     alt: "Case Study 4"
   - image_path: /pics/masters-dissertation/case-study-5.png
-    url: /pics/masters-dissertation/case-study-5.png
+    url: /pics/masters-dissertation/case-study-5.PNG
     alt: "Case Study 5"
 ---
 
@@ -101,7 +101,7 @@ A five-stage process was devised for the whole procedure.
 
 Each stage in the procedure is implemented as a command in the workbench toolbar.
 
-![Process commands in FreeCAD workbench](/pics/masters-dissertation/workbench.png)
+![Process commands in FreeCAD workbench](/pics/masters-dissertation/workbench.PNG)
 
 
 ## Case study results
