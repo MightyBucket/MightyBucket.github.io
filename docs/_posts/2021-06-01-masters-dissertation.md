@@ -9,11 +9,11 @@ header:
   overlay_image: /misc/clip.gif
   overlay_filter: 0.2
   actions:
-    - label: "View Code"
+    - label: "<i class='fas fa-file-code'></i> Code"
       url: "http://www.example.com"
-    - label: "View Thesis"
+    - label: "<i class='fas fa-file-alt'></i> Thesis"
       url: "/misc/FYP_rj457_reduced.pdf"
-    - label: "View Poster"
+    - label: "<i class='fas fa-image'></i> Poster"
       url: "/misc/FYP_poster.pdf"
 
 case_studies:

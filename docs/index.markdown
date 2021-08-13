@@ -3,15 +3,15 @@
 layout: splash
 permalink: /
 header:
-  overlay_filer: 0.7
-  overlay_image: /pics/home-banner.jpg
-  overlay_color: "#5e616c"
+  overlay_filter: 0.25
+  overlay_image: /pics/home-banner.svg
   actions:
-    - label: "CV"
+    - label: "<i class='fas fa-file-alt'></i> CV"
       url: "/misc/CV-2021-06-20.pdf/"
-    - label: "LinkedIn"
+    - label: "<i class='fab fa-linkedin'></i> LinkedIn"
       url: "https://www.linkedin.com/in/rahul-jhuree-932649124/"
-excerpt: "Welcome to my website"
+  caption: 'Banner: [illustratelife](https://www.vecteezy.com/members/illustratelife)'
+excerpt: "Welcome to my site"
 title: "Rahul Jhuree"
 
 feature_row:
@@ -46,7 +46,7 @@ I've recently graduated from the University of Bath with a first-class honours m
 
 This website is being updated perpetually, so check in often!
 
-[View projects list]({{ "/projects/"}}){: .btn .btn--success .btn--large}
+[<i class='fas fa-tasks'></i> View projects list]({{ "/projects/"}}){: .btn .btn--success .btn--large}
 
 Above all else, *I like to create things*. I've always enjoyed making novel things out of different materials, and I've always found programming exhilarating. This is exemplified by my long list of personal projects.
 
