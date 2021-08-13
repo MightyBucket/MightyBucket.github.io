@@ -43,9 +43,9 @@ Below is my poster which showcases the process and results. PDF can be seen [her
 
 ![Poster](/pics/masters-dissertation/poster.jpg)
 
-The project was a big success. The feedback from my supervisor and assessor was extremely positive.
+The project was a big success. The feedback from my supervisor and assessor was extremely positive. My supervisor suggested this work could be used as a foundation for many other student projects.
 
-I recieved a mark of 73 on the project, which ensured that I recieved a first-class honours in my degree.
+I received a mark of 73 on the project, which ensured a first-class honours in my degree overall.
 
 ## Background
 
@@ -61,7 +61,7 @@ There are many opportunities for better manufacturing workflows to be exploited,
 
 This is strongly linked to Machine Learning and Artificial Intelligence which has garnered significant attention from the broader community, however this technology is still far from prevalence as it is still being explored and developed.
 
-![Pic of Generative Design](/pics/masters-dissertation/generative-design.jpg)
+![Pic of Generative Design](/pics/masters-dissertation/generations.gif)
 
 ## Existing products and research
 
@@ -76,9 +76,10 @@ I chose *FreeCAD* as my CAD platform to build the plugin on top of. It is a popu
 
 All scripting and coding was done in Python using the PyCharm IDE. Every function and entity in FreeCAD is well abstracted as an interface or object in Python, which make scripting and macros extremely powerful. It is mainly for this readon that FreeCAD was chosen.
 
+![Screenshot of PyCharm](/pics/masters-dissertation/pycharm.png)
+
 FreeCAD's graphical user interface (GUI) is developed in Qt, so plugin interfaces are implemented using Qt objects. Because of this, I was able to rapidly develop and prototype the plugin GUIs using Qt Designer.
 
-![Screenshot of PyCharm](/pics/masters-dissertation/pycharm.png)
 ![Screenshot of Qt Designer](/pics/masters-dissertation/qt-designer.png)
 
 
