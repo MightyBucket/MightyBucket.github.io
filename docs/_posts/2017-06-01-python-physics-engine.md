@@ -7,7 +7,7 @@ date:   2017-06-01 00:00:00 +0100
 categories: projects
 
 header:
-  overlay_image: /pics/physics-engine/code-snapshot.png
+  overlay_image: /pics/physics-engine/code-snapshot.PNG
   overlay_filter: 0.2
   actions:
   - label: "<i class='fas fa-file-code'></i> Code"
@@ -23,7 +23,7 @@ The objective of this project was to make a sandbox simulation environment that 
 
 In addition to the basic engine, I added many usability features like GUI controls and windows, all developed from scratch.
 
-![Screenshot or GIF of engine in action](/pics/physics-engine/screenshot.png)
+![Screenshot or GIF of engine in action](/pics/physics-engine/screenshot.PNG)
 
 Overall, this project taught me a lot about three areas. 
 <div class="notice--success" markdown="1">

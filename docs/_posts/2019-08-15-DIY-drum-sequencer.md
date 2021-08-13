@@ -92,7 +92,7 @@ Although I was very meticulous while making and soldering the board, there were 
 
 I used the online EasyEDA designer, which I picked up easily despite having little PCB design experience. There was also a good library of part footprints.
 
-![PCB design in EasyEDA and picture of finished PCB](/pics/drum-sequencer/pcb-design.png)
+![PCB design in EasyEDA and picture of finished PCB](/pics/drum-sequencer/pcb-design.PNG)
 
 The only feasible option for manufacturing these PCBs was to have them manufactured from a batch service in China, which is most cost effective when ordered in large numbers. Because of this, I decided to try and make a board design that was as general as possible in the hope that they could be used in future projects.
 

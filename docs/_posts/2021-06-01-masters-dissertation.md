@@ -17,13 +17,13 @@ header:
       url: "/misc/FYP_poster.pdf"
 
 case_studies:
-  - image_path: /pics/masters-dissertation/case-study-1.png
+  - image_path: /pics/masters-dissertation/case-study-1.PNG
     url: /pics/masters-dissertation/case-study-1.PNG
     alt: "Case Study 1"
-  - image_path: /pics/masters-dissertation/case-study-4.png
+  - image_path: /pics/masters-dissertation/case-study-4.PNG
     url: /pics/masters-dissertation/case-study-4.PNG
     alt: "Case Study 4"
-  - image_path: /pics/masters-dissertation/case-study-5.png
+  - image_path: /pics/masters-dissertation/case-study-5.PNG
     url: /pics/masters-dissertation/case-study-5.PNG
     alt: "Case Study 5"
 ---
