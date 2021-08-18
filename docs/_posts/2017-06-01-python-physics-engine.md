@@ -116,6 +116,8 @@ At the bottom is a slider that allows the user to scrub through the simulation t
 
 On the right is a tabbed sidebar containing controls for playing around with the sandbox. The user can add new objects with this, as well as pause or reset the simulation. The user can also graph variables over time to visualise their trajectories.
 
+Within these tabs, you can see a range of sliders, labels, input boxes, buttons and others, each of which have been implemented as class objects.
+
 ![Animation showing the different tab views](/pics/physics-engine/tabs.gif)
 
 ## Results

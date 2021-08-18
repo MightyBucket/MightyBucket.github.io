@@ -10,7 +10,7 @@ header:
   overlay_filter: 0.2
   actions:
     - label: "<i class='fas fa-file-code'></i> Code"
-      url: "http://www.example.com"
+      url: "https://github.com/MightyBucket/AMGeneration"
     - label: "<i class='fas fa-file-alt'></i> Thesis"
       url: "/misc/FYP_rj457_reduced.pdf"
     - label: "<i class='fas fa-image'></i> Poster"
