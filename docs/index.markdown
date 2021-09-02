@@ -48,12 +48,6 @@ This website is being updated perpetually, so check in often!
 
 [<i class='fas fa-tasks'></i> View projects list]({{ "/projects/"}}){: .btn .btn--success .btn--large}
 
-Above all else, *I like to create things*. I've always enjoyed making novel things out of different materials, and I've always found programming exhilarating. This is exemplified by my long list of personal projects.
-
-This goes hand in hand with *my natural curiosity for learning how things work*. I enjoy breaking down and dissecting complex systems into simple pieces. I find it beautful how we can derive complexity and sophistication from simplicity.
-
-More recently, I have been effective in delivering change by collaborating in teams. My goal in the long term is to empower bigger change in a leadership role.
-
 [cv-link]:	/misc/CV-2021-06-20.pdf
 
 
