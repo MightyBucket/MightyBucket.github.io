@@ -38,16 +38,20 @@ feature_row:
     btn_label: "Learn more"     
 ---
 
-# About me
+# Welcome
 
-Hello! I'm Rahul. I'm 23 years old and born and raised in London, United Kingdom. 
-
-I've recently graduated from the University of Bath with a first-class honours masters degree in MEng Integrated Mechanical and Electrical Engineering.
-
-This website is being updated perpetually, so check in often!
+Hey, I'm Rahul! This is where I write about my projects and experiences.
 
 [<i class='fas fa-tasks'></i> View projects list]({{ "/projects/"}}){: .btn .btn--success .btn--large}
 
-[cv-link]:	/misc/CV-2021-06-20.pdf
+## What I do
 
+My strengths mostly lie in Computer Science and Engineering, but I like to think of myself as a [generalist][generalist-link]. What drives me at the core is the satisfaction I get out of solving real problems using my technical and creative skills. My portfolio of projects is a testament to that mindset.
+
+I have been programming since I was at least 12 and have been making things for a lot longer. I am always trying to hone and sharpen my skillset, as well as broaden my horizons.
+
+Right now what excites me the most is Machine Learning and Artifical Intelligence. We are only beginning to tap into its potential as the hardware and tools have only recently made it feasible and accessible.
+
+[cv-link]:	/misc/CV-2021-06-20.pdf
+[generalist-link]: https://www.forbes.com/sites/forbesbusinesscouncil/2021/06/03/the-value-of-being-a-generalist/?sh=4ead183a2fc8
 

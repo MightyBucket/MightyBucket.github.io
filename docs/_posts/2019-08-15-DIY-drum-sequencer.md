@@ -18,8 +18,6 @@ In his tutorial the core functionality was implemented using an Arduino Nano, bu
 
 The layout for the panel was particularly inspired by the classic Roland TR-808 drum synthesizer.
 
-This project was particularly inspired by [this video][sequencer-vid].
-
 ![Picture of Roland TR-808][pic-tr808]
 
 ## Design and Specifications

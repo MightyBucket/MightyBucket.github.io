@@ -40,7 +40,7 @@ results_gallery:
 
 ## Summary
 
-I made this alongside two other friends in Robotics Club at my sixth form. This was a fun side project that I did alongside my first year of A-levels.
+I made this with two other friends in Robotics Club at my sixth form. This was a fun side project that I did alongside my first year of A-levels.
 
 We wanted to make something out of the spare pieces and materials that were lying around in the Computing and DT departments.
 

@@ -17,7 +17,7 @@ header:
 
 ## Summary
 
-I developed this alongside learning my Solid Mechanics modules at university to solidify my understanding of the subject. This project significantly developed my programming skills. The engine was derived into a game also written in Python, which was then ported to C.
+I developed this while learning my Solid Mechanics modules at university to strengthen my understanding. This project significantly developed my programming skills. The engine was derived into a game also written in Python, which was then ported to C.
 
 The objective of this project was to make a sandbox simulation environment that could be used to simulate a range of statics and dynamics problems. Users could create simple 2D shapes and attach forces to them. These forces could be described with simple equations.
 
@@ -120,7 +120,11 @@ Within these tabs, you can see a range of sliders, labels, input boxes, buttons 
 
 ![Animation showing the different tab views](/pics/physics-engine/tabs.gif)
 
-## Results
+## Object-oriented model and event-driven programming
+
+Both the objects in the simulation engine and the UI elements are class objects. This was necessary in a project like this because of the inherent complexity of this process.
+
+Nearly all of these objects are event driven rather than procedural. Each object has its own `draw` and `update` method, which get called inside the main program loop every time the screen is redrawn and when the user uses the mouse and keyboard, respectively.
 
 
 
